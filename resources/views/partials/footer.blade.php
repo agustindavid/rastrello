@@ -4,9 +4,9 @@
       <img class="logo-footer"  alt="" src="@asset('images/logo.svg')">
     </div>
     <div class="text-center">
-      <a href="https://www.designhotels.com/hotels/italy/panicale-umbria/rastrello/" target="_blank"><img class="hotels-logo" src="@asset('images/logo-hotels.svg')" alt=""></a>
+      <a href="https://www.designhotels.com/" target="_blank"><img class="hotels-logo" src="@asset('images/logo-hotels.svg')" alt=""></a>
       <br><br>
-      <a target="_blank"><img class="hotels-logo" src="@asset('images/smithlogo.png')" alt=""></a>
+      <a target="_blank" href="https://www.mrandmrssmith.com/luxury-hotels?utm_content=brand&gclid=CjwKCAjwj42UBhAAEiwACIhADgFEnE37b9qYl78voOTOTFbay3WGVkZYHeL95DzOLPK9oUIRtPuvKhoClWwQAvD_BwE"><img class="hotels-logo" src="@asset('images/smithlogo.png')" alt=""></a>
     </div>
   </div>
   <div  class="menu">
@@ -22,7 +22,7 @@
       <div class="title">Experiences</div>
       <div  class="item"><a href="{{ home_url() }}/panicale">Panicale</a></div>
       <div  class="item"><a href="{{ home_url() }}/experiences">Nearby </a> </div>
-      <div  class="item"> FAQ </div>
+      <!-- <div  class="item"> FAQ </div> -->
     </div>
     <div  class="list">
       <div  class="title">Follow Us</div>
@@ -46,6 +46,6 @@
   </div>
   <div  class="end">
     <img  alt="" src="@asset('images/maps-and-flags.svg')">
-    <a  class="content" href="https://www.google.com/maps/place/Rastrello+Boutique+Hotel/@43.0294284,12.0982164,19z/data=!3m1!4b1!4m5!3m4!1s0x132eadd3d0e97531:0x2b88e2f8cd44b8dd!8m2!3d43.0294284!4d12.0987636" style="color: white" target="_blank">VIA GROSSI 10, PANICALE (PG), ITALY</a>
+    <a  class="content" href="https://rastrello.com/location/" style="color: white">VIA GROSSI 10, PANICALE (PG), ITALY</a>
   </div>
 </div>

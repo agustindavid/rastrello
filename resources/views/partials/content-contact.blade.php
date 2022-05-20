@@ -18,10 +18,10 @@
       <p  class="opening-restaurant">PHONE NUMBERS</p>
       <table  class="table-restaurant">
         <tr >
-          <td  class="td-restaurant hour-restarant"><a  href="tel:+39075837246">+39 075 837246</a></td>
+          <td  class="td-restaurant hour-restarant">HOTEL: <a  href="tel:+39075837246">+39 075 837246</a></td>
         </tr>
         <tr >
-          <td  class="td-restaurant hour-restarant"><a  href="tel:393534126302">+39 353 4126302</a></td>
+          <td  class="td-restaurant hour-restarant">CUCINA & GIARDINO: <a  href="tel:393534126302">+39 353 4126302</a></td>
         </tr>
       </table>
     </div>

@@ -55,12 +55,14 @@
     <div ><a href="{{ home_url() }}/location">Location</a></div>
     <div> <a href="{{ home_url() }}/#rooms">Rooms</a></div>
     <div ><a href="{{ home_url() }}/restaurant">Cucina &amp; Giardino</a></div>
-    <div >Our Extra Virgin Olive Oil</div>
+    <div > <a target="_blank" href="https://rastrelloevoo.com/"> Our Extra Virgin Olive Oil</a></div>
     <div ><a href="{{ home_url() }}/gallery">Photo Gallery</a></div>
   </div>
   <div  class="booking">
     <img  alt="" class="logo" src="@asset('images/logo.svg')">
-    <div  class="image"></div>
+    <div class="image">
+      <img src="" alt="">
+    </div>
     <button  id="open-booking" class="btn-3 open-booking">BOOK NOW</button>
   </div>
 </div>

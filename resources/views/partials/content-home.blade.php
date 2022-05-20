@@ -93,8 +93,8 @@
   <div  class="text">
     <span >Explore Rastrello</span>
     <div  class="button-row">
-      <button  class="btn-location" style="cursor: pointer"> <a href="https://my.matterport.com/show/?m=V2VKeEYwHca" target="_blank"> Take the virtual tour </a> </button>
-      <button  class="btn-location" style="cursor: pointer"> <a href="{{ home_url() }}/gallery"> Photo gallery </a> </button>
+      <button  class="btn-location-2" style="cursor: pointer"> <a href="https://my.matterport.com/show/?m=V2VKeEYwHca" target="_blank"> Take the virtual tour </a> </button>
+      <button  class="btn-location-2" style="cursor: pointer"> <a href="{{ home_url() }}/gallery"> Photo gallery </a> </button>
     </div>
   </div>
 </div>
@@ -103,17 +103,20 @@
   <div  class="title">Unique Experiences in the<br>"Green Heart of Italy"</div>
   <div  class="imgs">
     <div  class="wrapper-1">
-      <div  style="background-image: url('@asset('images/olive.jpg')'">
-        <a class="overlay-link" href="https://store.rastrello.com"></a>
+      <div  style="background-image: url('@asset('images/oliveexperience.jpg')'">
+        <a target="_blank" class="overlay-link" href="https://rastrelloevoo.com/">
         <div  class="title">Extra Virgin Olive Oil</div>
+        </a>
       </div>
       <div  style="background-image: url('@asset('images/panicale.jpg')')">
-        <a class="overlay-link" href="{{ home_url() }}/panicale"></a>
+        <a class="overlay-link" href="{{ home_url() }}/panicale">
         <div  class="title">Panicale</div>
+        </a>
       </div>
       <div  style="background-image: url('@asset('images/nearby.jpg')')">
-        <a class="overlay-link" href="{{ home_url() }}/experiences"></a>
+        <a class="overlay-link" href="{{ home_url() }}/experiences">
         <div  class="title">Nearby</div>
+        </a>
       </div>
     </div>
   </div>

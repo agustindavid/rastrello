@@ -27,8 +27,8 @@
       <p  class="opening-restaurant">Closed January 15th until March 15th </p>
       <div  class="my">
         <a  class="btn -primary" href="https://api.whatsapp.com/send?phone=393534126302&amp;text=Hi%20Cucina%20%26%20Giardino!%20I%20would%20like%20to%20reserve%20a%20table.%20Do%20you%20have%20availability%3F" target="_blank">RESERVE A TABLE</a><br><br>
-        <a  class="btn -primary" href="{{home_url()}}/wp-content/uploads/2022/05/menu-dec.pdf" target="_blank">VIEW OUR MONTHLY MENU</a><br><br>
-        <a  class="btn -primary" href="" target="_blank">VIEW OUR SUNDAY MENU</a>
+        <a  class="btn -primary" href="{{home_url()}}/wp-content/uploads/2022/05/EVENING-MENU-MAY-ENG.pdf" target="_blank">VIEW OUR MONTHLY MENU</a><br><br>
+        <a  class="btn -primary" href="{{home_url()}}/wp-content/uploads/2022/05/BRUNCH-MENU-May-ENG.pdf" target="_blank">VIEW OUR SUNDAY MENU</a>
       </div>
     </div>
     <div  class="column-restaurant">
