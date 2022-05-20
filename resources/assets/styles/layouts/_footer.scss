@@ -1,0 +1,203 @@
+.footer {
+  height: 50vh;
+  background-color: #2a2e35;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  @media screen and (max-width: 767px) {
+    height: auto;
+    flex-direction: column;
+  }
+
+  img {
+    width: 25%;
+    max-height: none;
+
+    @media screen and (max-width: 767px) {
+      width: 50%;
+      margin: 5%;
+    }
+  }
+
+  .menu {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    z-index: 1;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    >.list {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        align-items: center;
+        padding: 5% 0;
+      }
+
+      >.title {
+        font-family: Prata,serif;
+        color: #fff;
+        font-weight: 400;
+        padding-bottom: 30px;
+        font-size: 2rem;
+        text-align: left;
+
+        @media screen and (max-width: 767px) {
+          padding-bottom: 5%;
+          font-size: 1rem;
+        }
+      }
+
+      >.item {
+        color: #fff;
+        font-weight: 300;
+        padding: 10px 0;
+        text-align: left;
+        cursor: pointer;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 0.8rem;
+        }
+
+        a {
+          color: #fff;
+          font-weight: 300;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.footer-logos {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+
+  .logo-footer {
+    width: 50%;
+  }
+}
+
+.banner-bt {
+  width: 100%;
+  height: 55px;
+  background-color: #24272a;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 0;
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  &.-top {
+    background-color: #3f454d;
+  }
+
+  >div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 15%;
+    font-weight: 400;
+    font-size: .8rem;
+    color: #fff;
+  }
+
+  >.start {
+    justify-self: start;
+    padding-left: 5%;
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+      justify-self: center;
+      padding: 0;
+      flex-direction: column;
+    }
+
+    >div {
+      padding-right: 0;
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 1rem;
+      }
+
+      >img {
+        height: 12px;
+        margin-left: 12px;
+      }
+
+      >a {
+        margin-left: 12px;
+        white-space: pre;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 400;
+        font-size: 0.8rem;
+
+        @media screen and (max-width: 767px) {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+  >.end {
+    justify-self: end;
+    padding-right: 2.5%;
+
+    @media screen and (max-width: 767px) {
+      justify-self: center;
+      padding: 0;
+    }
+
+    >img {
+      height: 20px;
+    }
+
+    >a {
+      margin-left: 20px;
+      white-space: pre;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 400;
+      font-size: 0.8rem;
+
+      @media screen and (max-width: 767px) {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+.home {
+  .banner-bt {
+    margin-bottom: 70px;
+  }
+}
