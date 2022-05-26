@@ -38,8 +38,21 @@
 </div>
 
 <style>
-  .slick-arrow {
-    display: none !important;
+  .center .room-slide-arrow {
+    top: 35%;
+  }
+
+  .center .room-slide-arrow span {
+    font-size: 4rem;
+  }
+
+  .center .room-slide-arrow {
+    left: 40px;
+  }
+
+  .center .room-slide-arrow.next {
+    right: 40px;
+    left: auto;
   }
 </style>
 

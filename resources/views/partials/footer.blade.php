@@ -17,6 +17,7 @@
       <div class="item"><a href="{{ home_url() }}/about-us">Press</a></div>
       <div class="item"><a href="{{ home_url() }}/gallery">Photo Gallery</div>
       <div class="item"><a href="{{ home_url() }}/restaurant">Cucina &amp; Giardino</a></div>
+      <div  class="item"><a href="@asset('images/faq.pdf')">FAQ</a></div>
     </div>
     <div  class="list">
       <div class="title">Experiences</div>

@@ -95,6 +95,8 @@ export default {
       centerMode: true,
       centerPadding: '25%',
       slidesToShow: 1,
+      prevArrow: '<div class="room-slide-arrow prev"><span class="material-symbols-outlined material-icons">arrow_back_ios</span></div>',
+      nextArrow: '<div class="room-slide-arrow next"><span class="material-symbols-outlined material-icons">arrow_forward_ios</span></div>',
       responsive: [
         {
           breakpoint: 768,
