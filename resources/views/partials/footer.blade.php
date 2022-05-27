@@ -3,7 +3,7 @@
     <div class="text-center">
       <img class="logo-footer"  alt="" src="@asset('images/logo.svg')">
     </div>
-    <div class="text-center">
+    <div class="text-center external-logos">
       <a href="https://www.designhotels.com/" target="_blank"><img class="hotels-logo" src="@asset('images/logo-hotels.svg')" alt=""></a>
       <br><br>
       <a target="_blank" href="https://www.mrandmrssmith.com/luxury-hotels?utm_content=brand&gclid=CjwKCAjwj42UBhAAEiwACIhADgFEnE37b9qYl78voOTOTFbay3WGVkZYHeL95DzOLPK9oUIRtPuvKhoClWwQAvD_BwE"><img class="hotels-logo" src="@asset('images/smithlogo.png')" alt=""></a>
