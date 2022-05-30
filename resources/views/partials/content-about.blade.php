@@ -4,8 +4,8 @@
   <div class="title">
     <h3>Press</h3>
     <div class="press-summary">
-      <div>Hotel Media / Cucina & Giardino Contact<br> Chiara Verdacchi, general manager <br> <br> 
-      Born and raised locally and studied in Perugia and Siena with a degree in linguistics and intercultural communications, Chiara had traveled all of her life, while pursuing her career in professional sports. Returning home in 2020, Chiara’s multilingual capabilities and multicultural understandings have created the perfect segue into Rastrello’s general manager.<br> <br> chiara@rastrello.com <br> +39 353 4126302 / +39 075 8379175</div>
+      <div>Hotel Media / Cucina & Giardino Contact<br> Chiara Verdacchi, general manager
+      <br> <br> chiara@rastrello.com <br> +39 353 4126302 / +39 075 8379175</div>
     </div>
   </div>
   <div class="press-table">
