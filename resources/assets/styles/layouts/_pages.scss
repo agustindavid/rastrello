@@ -176,6 +176,8 @@ button {
 
   @media screen and (max-width: 767px) {
     font-size: 1rem;
+    margin: 16px auto;
+    display: block;
   }
 
   &:hover {
@@ -228,6 +230,7 @@ button {
 
       @media screen and (max-width: 767px) {
         font-size: 1.5rem;
+        margin: 16px auto;
       }
     }
 
@@ -266,6 +269,8 @@ button {
   background-position: center top;
   position: relative;
 
+  
+
   .text {
     color: #fff;
     position: absolute;
@@ -276,6 +281,10 @@ button {
     flex-direction: column;
     align-items: center;
     font-family: Prata,serif;
+
+    @media screen and (max-width: 767px) {
+      width: 85%;
+    }
 
     span:nth-child(1) {
       font-size: 4vw;
@@ -734,6 +743,14 @@ button {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      font-size: 2rem;
+      top: 15%;
+      width: inherit;
+    }
+
+    
   }
 
   .slick-active {
@@ -839,6 +856,10 @@ body.gallery {
   margin-right: auto;
   margin-left: auto;
 
+  @media screen and (max-width: 767px) {
+    width: 95%;
+  }
+
   p {
     color: #a28578;
     text-align: center;
@@ -897,6 +918,9 @@ body.gallery {
   width: 70%;
   border-collapse: collapse;
   margin-bottom: 15px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .hour-restarant {
