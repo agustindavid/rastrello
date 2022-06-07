@@ -90,3 +90,14 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+    if( function_exists('acf_add_options_page') ) {
+
+        acf_add_options_page(array(
+            'page_title' 	=> 'Translations',
+            'menu_title'	=> 'Translations',
+            'menu_slug' 	=> 'translations',
+            'capability'	=> 'edit_posts',
+            'redirect'		=> false
+        ));
+    }

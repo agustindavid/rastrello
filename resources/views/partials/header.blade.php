@@ -2,6 +2,25 @@
   global $wp;
 @endphp
 
+@php $page_texts=get_field('page_texts', 'option') @endphp
+
+
+@php
+
+//print_r($page_texts);
+$url_lang=$get_current_lang;
+
+//echo $url_lang;
+
+foreach($page_texts as $key => $lang){
+  if($lang['language']==$url_lang) {
+    //echo $key;
+    $curr_lang=$key;
+  }
+}
+
+@endphp
+
 <div  class="banner-bt -top" style="display: none">
   <div  class="start">
     <div >
@@ -26,10 +45,25 @@
     <div  class="bar3"></div>
   </div>
   <div  class="langs">
-    <div class="selected-lang">en</div>
+    <div class="selected-lang">
+      @switch($get_current_lang)
+          @case('en_EN')
+              EN
+              @break
+          @case('es_ES')
+              ES
+            @break
+          @case('it_IT')
+              IT
+            @break
+          @default
+            EN
+
+      @endswitch
+      </div>
     <div class="lang-options">
       <span><a href="{{ home_url( $wp->request ) }}/?c_lang=en_US">English</a></span>
-      <span>Italiano</span>
+      <span><a href="{{ home_url( $wp->request ) }}/?c_lang=it_IT">Italiano</a></span>
       <span>Deutsch</span>
       <span><a href="{{ home_url( $wp->request ) }}/?c_lang=es_ES">Español</a></span>
       <span>Português</span>
@@ -41,29 +75,29 @@
   <div class="right-menu-wrap">
     <div class="right-menu-items">
       <a target="_blank" href="https://rastrelloevoo.com/">Evoo</a>
-      <a href="{{ home_url() }}/contact">Contact</a>
+      <a href="{{ home_url() }}/contact">{{ $page_texts[$curr_lang]['text_list']['contact_text'] }}</a>
     </div>
     <div class="right-menu-btn">
-      <button id="open-booking"  class="btn-3 open-booking">BOOK NOW</button>
+      <button id="open-booking"  class="btn-3 open-booking text-uppercase">{{ $page_texts[$curr_lang]['text_list']['book_now_text'] }}</button>
     </div>
   </div>
 </div>
 
 <div  class="modal">
   <div  class="actions">
-    <div> <a href="{{ home_url() }}">Home</a></div>
-    <div ><a href="{{ home_url() }}/location">Location</a></div>
-    <div> <a href="{{ home_url() }}/#rooms">Rooms</a></div>
-    <div ><a href="{{ home_url() }}/restaurant">Cucina &amp; Giardino</a></div>
-    <div > <a target="_blank" href="https://rastrelloevoo.com/"> Our Extra Virgin Olive Oil</a></div>
-    <div ><a href="{{ home_url() }}/gallery">Photo Gallery</a></div>
+    <div> <a href="{{ home_url() }}">{{ $page_texts[$curr_lang]['text_list']['home_menu'] }}</a></div>
+    <div ><a href="{{ home_url() }}/location">{{ $page_texts[$curr_lang]['text_list']['location_menu'] }}</a></div>
+    <div> <a href="{{ home_url() }}/#rooms">{{ $page_texts[$curr_lang]['text_list']['rooms_menu'] }}</a></div>
+    <div ><a href="{{ home_url() }}/restaurant">{{ $page_texts[$curr_lang]['text_list']['restaurant_menu'] }}</a></div>
+    <div > <a target="_blank" href="https://rastrelloevoo.com/">{{ $page_texts[$curr_lang]['text_list']['oil_menu'] }}</a></div>
+    <div ><a href="{{ home_url() }}/gallery">{{ $page_texts[$curr_lang]['text_list']['gallery_menu'] }}</a></div>
   </div>
   <div  class="booking">
     <img  alt="" class="logo" src="@asset('images/logo.svg')">
     <div class="image">
       <img src="" alt="">
     </div>
-    <button  id="open-booking" class="btn-3 open-booking">BOOK NOW</button>
+    <button  id="open-booking" class="btn-3 open-booking text-uppercase ">{{ $page_texts[$curr_lang]['text_list']['book_now_text'] }}</button>
   </div>
 </div>
 
@@ -76,7 +110,7 @@
 <div class="modal-space booking-modal">
   <div class="modal2">
     <div class="close" id="close-booking">x</div>
-    <div class="title prata">Book your stay</div>
+    <div class="title prata">{{ $page_texts[$curr_lang]['text_list']['booking_modal_title'] }}</div>
     <div class="division"></div>
     <form id="widget_link" novalidate="" target="_blank" action="https://be.synxis.com?" class="ng-untouched ng-pristine ng-valid">
       <input name="table" type="hidden" value="hotels">
@@ -98,14 +132,14 @@
         <div class="input-box">
           <img src="@asset('images/check.svg')" alt="">
           <label for="from">
-            <div class="prata">Check In </div>
+            <div class="prata">{{ $page_texts[$curr_lang]['text_list']['check_in'] }}</div>
             <input type="text" id="from" name="from">
           </label>
         </div>
         <div class="input-box">
           <img src="@asset('images/check.svg')" alt="">
           <label for="to">
-            <div>Check Out</div>
+            <div>{{ $page_texts[$curr_lang]['text_list']['check_out'] }}</div>
             <input type="text" id="to" name="to">
           </label>
         </div>
@@ -118,7 +152,7 @@
       <div class="input-box">
         <img alt="" src="@asset('images/adult.svg')">
         <label for="num_adults">
-          <div class="prata">Adults</div>
+          <div class="prata">{{ $page_texts[$curr_lang]['text_list']['adults_field'] }}</div>
           <select id="adult" name="adult">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -130,7 +164,7 @@
       <div class="input-box">
         <img alt="" src="@asset('images/children.svg')">
         <label for="num_adults">
-          <div class="prata">Children</div>
+          <div class="prata">{{ $page_texts[$curr_lang]['text_list']['childrens_field'] }}</div>
           <select id="child" name="child">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -140,7 +174,7 @@
       </div>
     </div>
     <div class="division"></div>
-    <a target="_blank" id="book-cta" href="https://be.synxis.com/?adult=2&arrive=2022-04-04&chain=5154&child=3&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart=2022-04-08&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2">Continue</a>
+    <a target="_blank" id="book-cta" href="https://be.synxis.com/?adult=2&arrive=2022-04-04&chain=5154&child=3&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart=2022-04-08&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2">{{ $page_texts[$curr_lang]['text_list']['modal_cta_text'] }}</a>
 
   </form>
 </div>

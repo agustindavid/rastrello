@@ -1,3 +1,20 @@
+@php $page_texts=get_field('page_texts', 'option') @endphp
+
+@php
+
+//print_r($page_texts);
+
+$url_lang=$get_current_lang;
+
+foreach($page_texts as $key => $lang){
+  if($lang['language']==$url_lang) {
+    //echo $key;
+    $curr_lang=$key;
+  }
+}
+
+@endphp
+
 <div  class="footer">
   <div class="footer-logos">
     <div class="text-center">
@@ -11,22 +28,22 @@
   </div>
   <div  class="menu">
     <div  class="list">
-      <div class="title">Hotel</div>
-      <div class="item open-booking">Reservations</div>
-      <div class="item"><a href="{{ home_url() }}/#rooms">Rooms</a></div>
-      <div class="item"><a href="{{ home_url() }}/about-us">Press</a></div>
-      <div class="item"><a href="{{ home_url() }}/gallery">Photo Gallery</div>
-      <div class="item"><a href="{{ home_url() }}/restaurant">Cucina &amp; Giardino</a></div>
-      <div  class="item"><a href="@asset('images/faq.pdf')">FAQ</a></div>
+      <div class="title">{{ $page_texts[$curr_lang]['text_list']['hotel_footer_title'] }}</div>
+      <div class="item open-booking">{{ $page_texts[$curr_lang]['text_list']['reservations_menu'] }}</div>
+      <div class="item"><a href="{{ home_url() }}/#rooms">{{ $page_texts[$curr_lang]['text_list']['rooms_menu'] }}</a></div>
+      <div class="item"><a href="{{ home_url() }}/about-us">{{ $page_texts[$curr_lang]['text_list']['press_menu'] }}</a></div>
+      <div class="item"><a href="{{ home_url() }}/gallery">{{ $page_texts[$curr_lang]['text_list']['gallery_menu'] }}</div>
+      <div class="item"><a href="{{ home_url() }}/restaurant">{{ $page_texts[$curr_lang]['text_list']['restaurant_menu'] }}</a></div>
+      <div  class="item"><a href="@asset('images/faq.pdf')">{{ $page_texts[$curr_lang]['text_list']['faq_menu'] }}</a></div>
     </div>
     <div  class="list">
-      <div class="title">Experiences</div>
-      <div  class="item"><a href="{{ home_url() }}/panicale">Panicale</a></div>
-      <div  class="item"><a href="{{ home_url() }}/experiences">Nearby </a> </div>
+      <div class="title">{{ $page_texts[$curr_lang]['text_list']['experiences_footer_title'] }}</div>
+      <div  class="item"><a href="{{ home_url() }}/panicale">{{ $page_texts[$curr_lang]['text_list']['panicale_menu'] }}</a></div>
+      <div  class="item"><a href="{{ home_url() }}/experiences">{{ $page_texts[$curr_lang]['text_list']['nearby_menu'] }}</a> </div>
       <!-- <div  class="item"> FAQ </div> -->
     </div>
     <div  class="list">
-      <div  class="title">Follow Us</div>
+      <div  class="title">{{ $page_texts[$curr_lang]['text_list']['follow_us_footer_title'] }}</div>
       <div  class="item"><a href="https://www.instagram.com/rastrello.panicale/" target="_blank">Instagram</a></div>
       <div  class="item"><a href="https://www.facebook.com/rastrello.panicale/" target="_blank">Facebook</a></div>
       <div  class="item"><a href="https://vsco.co/rastrellopanicale/gallery" target="_blank">VSCO</a></div>

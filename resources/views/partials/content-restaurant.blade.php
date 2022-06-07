@@ -1,34 +1,49 @@
+@php $restaurant_texts=get_field('restaurant_texts') @endphp
+
+@php
+
+$url_lang=$get_current_lang;
+
+
+foreach($restaurant_texts as $key => $lang){
+  if($lang['language']==$url_lang) {
+    //echo $key;
+    $curr_lang=$key;
+  }
+}
+
+@endphp
 <div  class="bg-restaurant"></div>
 <div  class="">
   <p  class="my title-restaurant" style="font-family: 'Prata', serif !important;">Cucina &amp; Giardino</p>
 </div>
 <div  class="dividier-restaurant"></div>
 <div  class="my content-info-restaurant">
-  <p  class="info-restaurant">Rastrello Cucina &amp; Giardino is the perfect place to enjoy the historic center of Panicale, while overlooking Lake Trasimeno.</p><p  class="info-restaurant">Opened in September 2020, we have a panoramic garden terrace with breathtaking views as well as an intimate indoor space for the colder months.</p><p  class="info-restaurant">Our goal is to offer a unique place for Panicalesi, guests, and tourists alike. A setting where you can enjoy an aperitivo or a dinner in a fascinating environment.</p><p  class="info-restaurant">The menu created by Chef Nicola is closely linked to the territory that surrounds us and its products. Precisely for this reason, the menu follows the seasonality of each ingredient, including what is harvested daily from our gardens.</p>
+  <p  class="info-restaurant">{!! $restaurant_texts[$curr_lang]['text_list']['intro_text'] !!}</p>
 </div>
 <div  class="content-restaurant my">
   <div  class="grid-restaurant my">
     <div  class="column-restaurant">
-      <p  class="opening-restaurant">OPENING HOURS</p>
+      <p  class="opening-restaurant">{{ $restaurant_texts[$curr_lang]['text_list']['opening_hours_title'] }}</p>
       <table  class="table-restaurant">
         <tr >
-          <td  class="td-restaurant hour-restarant">Every day from 5pm until 11pm </td>
+          <td  class="td-restaurant hour-restarant">{{ $restaurant_texts[$curr_lang]['text_list']['opening_hours'] }}</td>
         </tr>
         <tr >
-          <td  class="td-restaurant hour-restarant">Sunday BRUNCH from 9am to 2pm</td>
+          <td  class="td-restaurant hour-restarant">{{ $restaurant_texts[$curr_lang]['text_list']['opening_hours_sunday'] }}</td>
         </tr>
       </table>
-      <p  class="opening-restaurant">RESERVATION PHONE</p>
+      <p  class="opening-restaurant">{{ $restaurant_texts[$curr_lang]['text_list']['reservation_phone_title'] }}</p>
       <table  class="table-restaurant">
         <tr >
-          <td  class="td-restaurant hour-restarant"><a  href="tel:+390758379175"> +39 075 8379175</a></td>
+          <td  class="td-restaurant hour-restarant"><a  href="tel:+390758379175"> {{ $restaurant_texts[$curr_lang]['text_list']['reservation_phone'] }}</a></td>
         </tr>
       </table>
-      <p  class="opening-restaurant">Closed January 15th until March 15th </p>
+      <p  class="opening-restaurant">{{ $restaurant_texts[$curr_lang]['text_list']['disclaimer'] }}</p>
       <div  class="my">
-        <a  class="btn -primary" href="https://api.whatsapp.com/send?phone=393534126302&amp;text=Hi%20Cucina%20%26%20Giardino!%20I%20would%20like%20to%20reserve%20a%20table.%20Do%20you%20have%20availability%3F" target="_blank">RESERVE A TABLE</a><br><br>
-        <a  class="btn -primary" href="{{home_url()}}/wp-content/uploads/2022/05/EVENING-MENU-MAY-ENG.pdf" target="_blank">VIEW OUR MONTHLY MENU</a><br><br>
-        <a  class="btn -primary" href="{{home_url()}}/wp-content/uploads/2022/05/BRUNCH-MENU-May-ENG.pdf" target="_blank">VIEW OUR SUNDAY MENU</a>
+        <a  class="btn -primary" href="https://api.whatsapp.com/send?phone=393534126302&amp;text=Hi%20Cucina%20%26%20Giardino!%20I%20would%20like%20to%20reserve%20a%20table.%20Do%20you%20have%20availability%3F" target="_blank">{{ $restaurant_texts[$curr_lang]['text_list']['reserve_table_'] }}</a><br><br>
+        <a  class="btn -primary" href="{{ $restaurant_texts[$curr_lang]['text_list']['monthly_menu_file'] }}" target="_blank">{{ $restaurant_texts[$curr_lang]['text_list']['monthly_menu'] }}</a><br><br>
+        <a  class="btn -primary" href="{{ $restaurant_texts[$curr_lang]['text_list']['sunday_menu_file'] }}" target="_blank">{{ $restaurant_texts[$curr_lang]['text_list']['sunday_menu'] }}</a>
       </div>
     </div>
     <div  class="column-restaurant">

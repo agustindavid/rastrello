@@ -1,10 +1,28 @@
+@php $panicale_texts=get_field('panicale_texts') @endphp
+
+@php
+
+$url_lang=$get_current_lang;
+
+echo $url_lang;
+
+
+foreach($panicale_texts as $key => $lang){
+  if($lang['language']==$url_lang) {
+    //echo $key;
+    $curr_lang=$key;
+  }
+}
+
+@endphp
+
 <div class="experience-space">
   <div class="category-img">
     <img alt="" src="@asset('images/mappanicale.svg')">
   </div>
   <div class="experiences-col">
     <div class="category">
-      <h1>Recommended Places to Visit in Panicale:</h1>
+      <h1>{{ $panicale_texts[$curr_lang]['text_list']['tagline'] }}</h1>
       <a href="https://www.umbriatourism.it/web/umbria/-/panica-1" target="_blank">Panicale</a>
       <a href="https://www.umbriatourism.it/en_US/-/teatro-cesare-caporali-panicale?p=/cultura&amp;t=Cultura" target="_blank">Cesare Caporali Theatre</a>
       <a href="https://www.umbriatourism.it/web/umbria/-/chiesa-di-san-sebastiano-panicale" target="_blank">Fresco of “St. Sebastian’s Martyr”, by Pietro Perugino: Church of St. Sebastian</a>

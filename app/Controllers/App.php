@@ -30,4 +30,32 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function get_current_lang() {
+        session_start();
+
+            $url_lang=$_GET['c_lang'];
+
+        if(!(isset($_SESSION['language']))){
+            if(($_GET['c_lang'])) {
+                $url_lang=$_GET['c_lang'];
+                $_SESSION["language"] = $url_lang;
+                return $url_lang;
+            } else {
+                $url_lang='en_US';
+                $_SESSION["language"] = $url_lang;
+                return $url_lang;
+            }
+        } else {
+            if(($_GET['c_lang'])) {
+                $url_lang=$_GET['c_lang'];
+                unset($_SESSION['language']);
+                $_SESSION["language"] = $url_lang;
+                return $url_lang;
+            } else {
+                $url_lang=$_SESSION['language'];
+                return $url_lang;
+            }
+        }
+    }
 }

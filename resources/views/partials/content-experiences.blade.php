@@ -1,10 +1,26 @@
+@php $experiences_texts=get_field('experiences_texts') @endphp
+
+@php
+
+$url_lang=$get_current_lang;
+
+
+foreach($experiences_texts as $key => $lang){
+  if($lang['language']==$url_lang) {
+    //echo $key;
+    $curr_lang=$key;
+  }
+}
+
+@endphp
+
 <div class="experience-space exp-content">
   <div class="category-img">
     <iframe height="500" src="https://www.google.com/maps/d/u/0/embed?mid=1Juj1DiBO0c9SCe4arDMklYuC9Vk-4Lp5" width="80%"></iframe>
   </div>
   <div class="experiences-col">
     <div class="category">
-      <h1>Recommended Towns to Visit</h1>
+      <h1>{{ $experiences_texts[$curr_lang]['text_list']['tagline'] }}</h1>
       <a href="https://www.visittuscany.com/en/destinations/montepulciano/" target="_blank">Montepulciano</a>
       <a href="https://www.visittuscany.com/en/destinations/cortona/" target="_blank">Cortona</a>
       <a href="https://www.cortonamia.com/en/convento-le-celle/" target="_blank">Le Celle</a>

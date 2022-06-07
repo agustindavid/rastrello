@@ -1,27 +1,39 @@
+@php $contact_texts=get_field('contact_texts') @endphp
+
+@php
+
+$url_lang=$get_current_lang;
+
+foreach($contact_texts as $key => $lang){
+  if($lang['language']==$url_lang) {
+    //echo $key;
+    $curr_lang=$key;
+  }
+}
+
+@endphp
+
 <div  class="bg-restaurant"></div>
 <div  class="">
-  <p  class="my title-restaurant" style="font-family: 'Prata', serif !important;">Contact</p>
+  <p  class="my title-restaurant" style="font-family: 'Prata', serif !important;">{{ $contact_texts[$curr_lang]['text_list']['title'] }}</p>
 </div>
 <div  class="dividier-restaurant"></div>
-<div  class="my content-info-restaurant" style="display:none">
-  <p  class="info-restaurant">Rastrello Cucina &amp; Giardino is the perfect place to enjoy the historic center of Panicale, while overlooking Lake Trasimeno.</p><p  class="info-restaurant">Opened in September 2020, we have a panoramic garden terrace with breathtaking views as well as an intimate indoor space for the colder months.</p><p  class="info-restaurant">Our goal is to offer a unique place for Panicalesi, guests, and tourists alike. A setting where you can enjoy an aperitivo or a dinner in a fascinating environment.</p><p  class="info-restaurant">The menu created by Chef Nicola is closely linked to the territory that surrounds us and its products. Precisely for this reason, the menu follows the seasonality of each ingredient, including what is harvested daily from our gardens.</p>
-</div>
 <div  class="content-restaurant my">
   <div  class="grid-restaurant my">
     <div  class="column-restaurant">
-      <p  class="opening-restaurant">EMAIL</p>
+      <p  class="opening-restaurant">{{ $contact_texts[$curr_lang]['text_list']['email_title'] }}</p>
       <table  class="table-restaurant">
         <tr >
-          <td  class="td-restaurant hour-restarant"> <a href="info@rastrello.com">INFO@RASTRELLO.COM</a></td>
+          <td  class="td-restaurant hour-restarant"> <a href="mailto:info@rastrello.com">{{ $contact_texts[$curr_lang]['text_list']['email'] }}</a></td>
         </tr>
       </table>
-      <p  class="opening-restaurant">PHONE NUMBERS</p>
+      <p  class="opening-restaurant">{{ $contact_texts[$curr_lang]['text_list']['phone_number_title'] }}</p>
       <table  class="table-restaurant">
         <tr >
-          <td  class="td-restaurant hour-restarant">HOTEL: <a  href="tel:+39075837246">+39 075 837246</a></td>
+          <td  class="td-restaurant hour-restarant">{!! $contact_texts[$curr_lang]['text_list']['phone_number_1'] !!}</a></td>
         </tr>
         <tr >
-          <td  class="td-restaurant hour-restarant">CUCINA & GIARDINO: <a  href="tel:393534126302">+39 353 4126302</a></td>
+          <td  class="td-restaurant hour-restarant">{!! $contact_texts[$curr_lang]['text_list']['phone_number_2'] !!}</td>
         </tr>
       </table>
     </div>
