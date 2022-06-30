@@ -41,9 +41,9 @@ foreach($texts as $key => $lang){
 </div>
 
 <div class="sec-10" id="location">
-  <button class="btn-location-cercles"><a href="https://rastrello.com/location/"></a></button>
+  <button class="btn-location-cercles"><a href="{{ $texts[$curr_lang]['text_list']['location_button_link'] }}"></a></button>
   <button class="btn-location" style="cursor: pointer">
-    <a href="https://rastrello.com/location/">
+    <a href="{{ $texts[$curr_lang]['text_list']['location_button_link'] }}">
       {{ $texts[$curr_lang]['text_list']['location_button'] }}
     </a>
   </button>
@@ -99,8 +99,8 @@ foreach($texts as $key => $lang){
   <div  class="text">
     <span>{{ $texts[$curr_lang]['text_list']['explore_rastrello'] }}</span>
     <div  class="button-row">
-      <button  class="btn-location" style="cursor: pointer"> <a href="https://my.matterport.com/show/?m=V2VKeEYwHca" target="_blank">{{ $texts[$curr_lang]['text_list']['virtual_tour_button'] }}</a> </button>
-      <button  class="btn-location" style="cursor: pointer"> <a href="{{ home_url() }}/gallery"> {{ $texts[$curr_lang]['text_list']['photo_gallery_button'] }} </a> </button>
+      <button  class="btn-location" style="cursor: pointer"> <a href="{{ $texts[$curr_lang]['text_list']['virtual_tour_button_link'] }}" target="_blank">{{ $texts[$curr_lang]['text_list']['virtual_tour_button'] }}</a> </button>
+      <button  class="btn-location" style="cursor: pointer"> <a href="{{ $texts[$curr_lang]['text_list']['photo_gallery_button_link'] }} "> {{ $texts[$curr_lang]['text_list']['photo_gallery_button'] }} </a> </button>
     </div>
   </div>
 </div>
@@ -110,15 +110,15 @@ foreach($texts as $key => $lang){
   <div  class="imgs">
     <div  class="wrapper-1">
       <div  style="background-image: url('@asset('images/olive.jpg')'">
-        <a class="overlay-link" href="https://store.rastrello.com"></a>
+        <a class="overlay-link" href="{{ $texts[$curr_lang]['text_list']['olive_oil_square_link'] }}"></a>
         <div  class="title">{{ $texts[$curr_lang]['text_list']['olive_oil_square'] }}</div>
       </div>
       <div  style="background-image: url('@asset('images/panicale.jpg')')">
-        <a class="overlay-link" href="{{ home_url() }}/panicale"></a>
+        <a class="overlay-link" href="{{ $texts[$curr_lang]['text_list']['panicale_square_link'] }}"></a>
         <div  class="title">{{ $texts[$curr_lang]['text_list']['panicale_square'] }}</div>
       </div>
       <div  style="background-image: url('@asset('images/nearby.jpg')')">
-        <a class="overlay-link" href="{{ home_url() }}/experiences"></a>
+        <a class="overlay-link" href="{{ $texts[$curr_lang]['text_list']['nearby_square_link'] }}"></a>
         <div  class="title">{{ $texts[$curr_lang]['text_list']['nearby_square'] }}</div>
       </div>
     </div>

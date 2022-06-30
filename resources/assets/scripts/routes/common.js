@@ -31,14 +31,14 @@ export default {
       adult = this.value;
       console.log(adult);
       console.log(fromDate);
-      link = 'https://be.synxis.com/?adult='+ adult +'&arrive='+ fromDate +'&chain=5154&child=' + child + '&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart='+ toDate +'&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2';
+      link = 'https://be.synxis.com/?adult='+ adult +'&arrive='+ fromDate +'&chain=5154&child=0&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart='+ toDate +'&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2';
       cta.href=link;
     });
 
     $('#child').on('change', function() {
       child = this.value;
       console.log(child);
-      link = 'https://be.synxis.com/?adult='+ adult +'&arrive'+ fromDate +'&chain=5154&child=' + child + '&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart='+ toDate +'&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2';
+      link = 'https://be.synxis.com/?adult='+ adult +'&arrive'+ fromDate +'&chain=5154&child=0&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart='+ toDate +'&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2';
       cta.href=link;
     });
 
@@ -58,7 +58,7 @@ export default {
         to.datepicker( 'option', 'minDate', getDate( this ) );
         fromDate = $.datepicker.formatDate('yy-mm-dd', getDate( this ));
         console.log(fromDate);
-        link = 'https://be.synxis.com/?adult='+ adult +'&arrive='+ fromDate +'&chain=5154&child=' + child + '&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart='+ toDate +'&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2';
+        link = 'https://be.synxis.com/?adult='+ adult +'&arrive='+ fromDate +'&chain=5154&child=0&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart='+ toDate +'&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2';
         cta.href=link;
       }),
     to = $( '#to' ).datepicker({
@@ -70,7 +70,7 @@ export default {
       from.datepicker( 'option', 'maxDate', getDate( this ) );
       toDate=$.datepicker.formatDate('yy-mm-dd', getDate( this ));
       console.log(toDate);
-      link = 'https://be.synxis.com/?adult='+ adult +'&arrive='+ fromDate +'&chain=5154&child=' + child + '&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart='+ toDate +'&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2';
+      link = 'https://be.synxis.com/?adult='+ adult +'&arrive='+ fromDate +'&chain=5154&child=0&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart='+ toDate +'&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2';
       cta.href=link;
     });
 

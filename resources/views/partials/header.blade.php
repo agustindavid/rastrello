@@ -174,7 +174,7 @@ foreach($page_texts as $key => $lang){
       </div>
     </div>
     <div class="division"></div>
-    <a target="_blank" id="book-cta" href="https://be.synxis.com/?adult=2&arrive=2022-04-04&chain=5154&child=3&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart=2022-04-08&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2">{{ $page_texts[$curr_lang]['text_list']['modal_cta_text'] }}</a>
+    <a target="_blank" id="book-cta" href="https://be.synxis.com/?adult=2&arrive=2022-04-04&chain=5154&child=0&command=pleasewait&config=SBE_Rastrello_V2&currency=EUR&depart=2022-04-08&hotel=36552&hotel_id=2849&level=hotel&listing_id=137532&locale=en-US&mode=command&nextcommand=roomsearch&num_babies=0&rooms=1&table=hotels&theme=SBE_Rastrello_V2">{{ $page_texts[$curr_lang]['text_list']['modal_cta_text'] }}</a>
 
   </form>
 </div>

@@ -269,7 +269,7 @@ button {
   background-position: center top;
   position: relative;
 
-  
+
 
   .text {
     color: #fff;
@@ -750,7 +750,7 @@ button {
       width: inherit;
     }
 
-    
+
   }
 
   .slick-active {
@@ -1261,6 +1261,7 @@ body.gallery {
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 9;
 }
 
 .content-internal {

@@ -1,4 +1,7 @@
-@php $experiences_texts=get_field('experiences_texts') @endphp
+@php
+  $experiences_texts=get_field('experiences_texts');
+  $experiences=get_field('experiences');
+@endphp
 
 @php
 
@@ -21,7 +24,7 @@ foreach($experiences_texts as $key => $lang){
   <div class="experiences-col">
     <div class="category">
       <h1>{{ $experiences_texts[$curr_lang]['text_list']['tagline'] }}</h1>
-      <a href="https://www.visittuscany.com/en/destinations/montepulciano/" target="_blank">Montepulciano</a>
+{{--       <a href="https://www.visittuscany.com/en/destinations/montepulciano/" target="_blank">Montepulciano</a>
       <a href="https://www.visittuscany.com/en/destinations/cortona/" target="_blank">Cortona</a>
       <a href="https://www.cortonamia.com/en/convento-le-celle/" target="_blank">Le Celle</a>
       <a href="https://www.visittuscany.com/en/destinations/siena/" target="_blank">Siena</a>
@@ -35,6 +38,9 @@ foreach($experiences_texts as $key => $lang){
       <a href="https://www.umbriatourism.it/-/orvieto" target="_blank">Orvieto</a>
       <a href="https://www.umbriatourism.it/web/umbria/-/tane-del-diavolo-parrano" target="_blank">Monteleone d’Orvieto (caves) and “Devil’s Bath” (close to Citta Della Pieve)</a>
       <a href="https://www.umbriatourism.it/-/gubb-1" target="_blank">Gubbio</a>
-      <a href="https://www.umbriatourism.it/-/spoleto" target="_blank">Spoleto</a>
+      <a href="https://www.umbriatourism.it/-/spoleto" target="_blank">Spoleto</a> --}}
+      @foreach($experiences as $experience)
+      <a href="{{ $experience['experience']['url'] }}" target="_blank">{{ $experience['experience']['title'] }}</a>
+    @endforeach
     </div>
   </div>

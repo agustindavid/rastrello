@@ -24,7 +24,7 @@ foreach($press_texts as $key => $lang){
     </div>
   </div>
   <div class="press-table">
-    <div class="press-row" style="padding: 0;">
+    {{-- <div class="press-row" style="padding: 0;">
       <div class="press-title-group" tabindex="0">
         <div class="press-title"><a href="{{home_url()}}/hotel-fact-sheet">{{ $press_texts[$curr_lang]['text_list']['fact_sheet_page'] }}</a></div>
       </div>
@@ -43,7 +43,14 @@ foreach($press_texts as $key => $lang){
       <div class="press-title-group">
         <div class="press-title"><a href="https://firebasestorage.googleapis.com/v0/b/il-rastrello-6a0ef.appspot.com/o/Press%2FRASTRELLO-BROCHURE-DIGITAL%20.pdf?alt=media&token=b42c23a8-8fa0-45f5-a187-21c1ff64b0e5" target="_blank">{{ $press_texts[$curr_lang]['text_list']['brochure_text'] }}</a></div>
       </div>
-    </div>
+    </div> --}}
+    @foreach($press_texts[$curr_lang]['text_list']['pages'] as $page)
+      <div class="press-row" style="padding: 0;">
+        <div class="press-title-group" tabindex="0">
+          <div class="press-title"> <a href="{{ $page['page']['url'] }}">{{ $page['page']['title'] }}</a></div>
+        </div>
+      </div>
+    @endforeach
   </div>
   <div class="title mb-title">
     <h3>{{ $press_texts[$curr_lang]['text_list']['articles_title'] }}</h3>
